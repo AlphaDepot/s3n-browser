@@ -61,3 +61,14 @@ A `Dockerfile` is included for straightforward containerized deployment.
 
 ### Docker Compose
 The repository includes a sample `compose.yml` file with example environment variables. 
+
+### Docker Hub Image
+A pre-built Docker image is available on Docker Hub at [lstsystems/s3n-browser](https://hub.docker.com/r/lstsystems/s3n-browser). You can deploy it with a simple command:
+
+```bash
+docker run -p 3000:3000 \
+  -e S3_ACCESS_KEY_ID=your_access_key \
+  -e S3_SECRET_ACCESS_KEY=your_secret_key \
+  -e S3_BUCKET_NAME=your_bucket_name \
+  lstsystems/s3n-browser
+```
